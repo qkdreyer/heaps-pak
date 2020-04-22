@@ -1,8 +1,11 @@
 class Main extends hxd.App
 {
     static function main() {
-        hxd.Res.initPak();
         new Main();
+    }
+
+    override function loadAssets(done) {
+        new hxd.fmt.pak.Loader(s2d, done);
     }
 
     override function init() {
